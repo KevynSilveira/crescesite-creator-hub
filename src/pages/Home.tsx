@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -17,6 +18,7 @@ interface Service {
 const Home = () => {
   const [services, setServices] = useState<Service[]>([])
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetchServices()
@@ -62,6 +64,14 @@ const Home = () => {
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-3">
               Falar com Especialista
+            </Button>
+            <Button 
+              variant="secondary"
+              size="lg"
+              onClick={() => navigate("/auth")}
+              className="text-lg px-8 py-3"
+            >
+              Área Administrativa
             </Button>
           </div>
         </div>
