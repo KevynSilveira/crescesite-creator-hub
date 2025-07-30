@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useScrollReveal } from "@/hooks/useScrollReveal"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -19,6 +20,10 @@ const Home = () => {
   const [services, setServices] = useState<Service[]>([])
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
+  const heroRef = useScrollReveal()
+  const featuresRef = useScrollReveal()
+  const servicesRef = useScrollReveal()
+  const ctaRef = useScrollReveal()
 
   useEffect(() => {
     fetchServices()
@@ -45,15 +50,20 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 md:px-6 lg:px-8 overflow-hidden">
+      <section 
+        ref={heroRef}
+        className="animate-scroll-reveal relative py-20 px-4 md:px-6 lg:px-8 overflow-hidden"
+      >
         <div className="absolute inset-0 gradient-primary opacity-10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Websites que
-            <span className="gradient-tech bg-clip-text text-transparent block">
-              Transformam Negócios
-            </span>
-          </h1>
+          <div className="floating-element">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Websites que
+              <span className="gradient-tech bg-clip-text text-transparent block">
+                Transformam Negócios
+              </span>
+            </h1>
+          </div>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Criamos experiências digitais de alta performance que conectam sua marca com o futuro
           </p>
@@ -78,7 +88,10 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8 bg-secondary/50">
+      <section 
+        ref={featuresRef}
+        className="animate-scroll-reveal py-16 px-4 md:px-6 lg:px-8 bg-secondary/50"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -130,7 +143,10 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8">
+      <section 
+        ref={servicesRef}
+        className="animate-scroll-reveal py-16 px-4 md:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -196,7 +212,10 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8 gradient-primary">
+      <section 
+        ref={ctaRef}
+        className="animate-scroll-reveal py-16 px-4 md:px-6 lg:px-8 gradient-primary"
+      >
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Pronto para Transformar seu Negócio?

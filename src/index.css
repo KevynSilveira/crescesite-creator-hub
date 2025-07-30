@@ -145,4 +145,34 @@ All colors MUST be HSL.
     background: hsl(var(--background) / 0.8);
     border: 1px solid hsl(var(--border) / 0.5);
   }
+
+  /* Peak Studio Style Animations */
+  .animate-scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-out;
+  }
+  
+  .animate-scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .logo-slide {
+    animation: slide 30s linear infinite;
+  }
 }

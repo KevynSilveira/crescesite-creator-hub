@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Home, Briefcase, Mail, Users, Settings, User } from "lucide-react"
+import { Home, Briefcase, Mail, Users, Settings, User, Grid3X3 } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 
 import {
@@ -19,6 +19,7 @@ import {
 const publicItems = [
   { title: "Início", url: "/", icon: Home },
   { title: "Serviços", url: "/services", icon: Briefcase },
+  { title: "Modelos", url: "/models", icon: Grid3X3 },
   { title: "Contato", url: "/contact", icon: Mail },
 ]
 
