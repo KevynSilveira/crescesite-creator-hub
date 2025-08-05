@@ -8,13 +8,12 @@
     "pnpm": ">=10.0.0"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint --fix",
-    "type-check": "tsc --noEmit",
-    "pre-deploy": "pnpm run lint && pnpm run type-check",
-    "postinstall": "pnpm run type-check"
+    "dev": "vite",
+    "build": "vite build", 
+    "build:dev": "vite build --mode development",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
