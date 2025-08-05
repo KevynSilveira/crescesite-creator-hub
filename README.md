@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
+# Next.js Template - Lasy AI
 
-## Project info
+Este é um template [Next.js](https://nextjs.org) otimizado para deploys sem problemas, bootstrapped com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**URL**: https://lovable.dev/projects/ba709ebb-645a-4e9c-b370-b9ca748bef75
+## 🚀 Melhorias para Deploy na Vercel
 
-## How can I edit this code?
+Este template inclui otimizações específicas para evitar erros comuns de deploy:
 
-There are several ways of editing your application.
+### ✅ **Compatibilidade de Dependências**
 
-**Use Lovable**
+- **Next.js 15.1.8** + **React 19** + todas as dependências atualizadas
+- **react-day-picker v9** compatível com React 19
+- **Configuração `.npmrc`** para resolver conflitos automaticamente
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ba709ebb-645a-4e9c-b370-b9ca748bef75) and start prompting.
+### ✅ **Configurações de Build Otimizadas**
 
-Changes made via Lovable will be committed automatically to this repo.
+- **TypeScript configurado** para excluir Supabase functions
+- **Webpack configurado** para ignorar conflitos Deno/Node.js
+- **`.vercelignore`** para otimizar o processo de build
 
-**Use your preferred IDE**
+### ✅ **Componentes Atualizados**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Calendar component** compatível com react-day-picker v9
+- **UI components** do Shadcn/UI nas versões mais recentes
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠️ Começando
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Execute o servidor de desenvolvimento:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+# ou
+bun dev
 ```
 
-**Edit a file directly in GitHub**
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Você pode começar editando a página modificando `app/page.tsx`. A página atualiza automaticamente conforme você edita o arquivo.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📚 Stack Tecnológica
 
-## What technologies are used for this project?
+- **Framework**: Next.js 15.1.8 com App Router
+- **React**: 19.0.0 com suporte total
+- **Styling**: Tailwind CSS + Shadcn/UI
+- **Icons**: Lucide React
+- **Forms**: React Hook Form + Zod
+- **UI Components**: Radix UI primitives
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔧 Deploy na Vercel
 
-## How can I deploy this project?
+### **Variáveis de Ambiente**
 
-Simply open [Lovable](https://lovable.dev/projects/ba709ebb-645a-4e9c-b370-b9ca748bef75) and click on Share -> Publish.
+Se você estiver usando Supabase, configure estas variáveis na Vercel:
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+NEXT_PUBLIC_SUPABASE_URL=sua_url_do_supabase
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anonima
+```
 
-Yes, you can!
+### **Deploy Automático**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Conecte seu repositório GitHub à Vercel
+2. A Vercel detectará automaticamente Next.js
+3. O build será executado sem erros graças às otimizações
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 📖 Saiba Mais
+
+Para aprender mais sobre Next.js, confira estes recursos:
+
+- [Documentação Next.js](https://nextjs.org/docs) - aprenda sobre recursos e API do Next.js
+- [Learn Next.js](https://nextjs.org/learn) - tutorial interativo do Next.js
+
+Você pode conferir [o repositório GitHub do Next.js](https://github.com/vercel/next.js) - seu feedback e contribuições são bem-vindos!
+
+---
+
+## 🎯 Deploy Otimizado
+
+A maneira mais fácil de deployar seu app Next.js é usar a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
+
+Confira nossa [documentação de deployment do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
+
+---
+
+_Template otimizado para uso com Lasy AI - builds consistentes e deploys sem problemas!_
